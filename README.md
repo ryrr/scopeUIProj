@@ -53,6 +53,7 @@ UI project for scope labs
   - `games-section`: responsible for games layout and setting games filters as well as mapping in the game rows
   - `game-row`: Individual game row component that gets mapped in, also contains `photo-display` instance
   - `photo-display`: Scrollable photo grid to display media, could potentially be re-used elsewhere hence the separation from `game-row`
+  - `photo-modal`: modal to show image flipbook when a photo is clicked 
 ## Stats
 - Would also probably be a flex container on mobile views, however using a grid could be a good choice if we want to arrange the cards in rows and columns on desktop
 - Stats flows the whole view width when scrolled, with cards overflowing or disappearing off screen. Design can be accomplished easily with the overflow property, margin adjustment and fixed display
@@ -71,7 +72,20 @@ UI project for scope labs
 - Can be accomplished by setting a current game variable to the game that album is from and then looking at currentGame[images[imdIdx]] and inc/dec imgIdx to select the appropriate image for display
 ## Filtering 
 - Teams filter and date ranges can be added to Games and can be removed by clicking the X on the filter bubble
-- can be accomplished trivially using a filteredGames useState that processes the larger games object when a filter is applied or removed 
+- can be accomplished trivially using a filteredGames useState that processes the larger games object when a filter is applied or removed
+## Example Flow
+- `home` gathers user data (stats and games) on load, perhaps caches it in a session so we don't refetch
+- `home` stores state
+  - `allGames`:game data master list
+  - `filteredGames`: modified when a filter is applied
+  - `stats`:all stat data (filtering stats would probably be a BE query)
+  - `currentGame`: targetgame for photo display modal
+- im assuming each game object would have a array of associated media
+- stats gets mapped into either a stats div or passed as props to a `stat-section` and spawns a stat card for each stat
+- same thing for games
+- games filtering functions would be inside `home` and passed to `games-section` as props along with filteredGames, so when filter fns are called filteredGames is updated and displayed in games section
+- would also be upload functions etc that trigger animations, API calls and such inside `home`
+- as well as modal display fns 
 # Pitfalls and Grey Areas
 - I've used Figma before but I am by no means an expert, may not have adhered to all the best practices, certainly tried to use auto-layout as much as I could
 - Responsive design always has some pitfalls like text getting too close in a row, etc... didn't delve too deeply into this but hopefully demonstrated how my design scales
