@@ -2,8 +2,7 @@
 - UI project for scope labs
 - [loom video](https://www.loom.com/share/53f84f85a074477490bf31a2bb41d09f?sid=d6f15c85-06ee-4cfd-a1b1-b52301580fe0) (sorry for all the ummmms at the begining!)
 - [figma link](scope_proj.fig)
-- small tweak to make design more [fun](scrapbook.png)
-- alternative editable/pinnable stats [design](scrapbook.PNG)
+- alternative editable/pinnable stats [design](scrapbook.PNG) (more fun but maybe too silly)
 # Overview
 - Decided on a temporary name of "Ballpark" for the app.
 - Allows for the visualization of attended Baseball games and the user-uploaded media associated with each game.
