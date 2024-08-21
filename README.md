@@ -23,6 +23,12 @@
 - I kept the stats section relatively basic, consisting of a couple cards in a scrollable section containing some high level information about the games a user has attended
 - I also took a risk on the font choice used for the numbers displayed in this section. While I was working on the design I kept thinking about how I could make it more fun, since it's an app about a game after all! To warm up and game-ify the design a little bit I went with this funky font that reminded me of human handwriting. To me this evokes the feeling that I or the user actually filled this information in themselves as they went to each game, erasing the previous entry and scrawling in an update as something notable happens. I drew inspiration from a golf card that you pencil in as you go. The sloppiness and silliness of it helps to translate the experience to filling out a journal while you're at each game, which to me makes it more fun! I was trying to imagine what a yearly Yankees scrapbook might look like if translated to the web. I have a couple ideas about taking the design even further in this direction expounded on in the next section.
 - I also imagine that the stats section would be larger on desktop, showing most if not all of the available stat cards in perhaps multiple rows if necessary
+- In my updated figma you'll see a vision of what the expanded stats section might look like, it's more of a grid than a row with support for larger stat items.
+- It could be implemented using css grid and a repeating patttern that gets filled via a function that places the stat cards you have added into the grid dyamicially.
+- In my head this also supports drag and drop re-arranging of stats (you could use a library) this would also mean you could drag small stats into the larger grid boxes and have them scale up to fit, which would require some code in the stat card component.
+## Recents section
+- this was a last min addition but I felt like the app was missing a way to immediately view a game that you've uploaded, I kept it simple.
+- could be larger and more grid-like on desktop, keeping it as a carousel-like scroll on mobile/tablet preserves some space 
 ## Errata 
 - It also may be unclear and half-baked but I made the Yankees logo in the Header clickable, which would in turn let you change the team affiliation and app theme to whichever MLB team you wanted.
 - the stats section is collapsable in case a user just wants to look at the games section
