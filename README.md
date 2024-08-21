@@ -60,8 +60,8 @@
 - component list
   - `home`: our brain component for the home screen, responsible for layout and querying the data from the BE
   - `stats`: responsible for stats section layout and mapping in the stat cards (could potentially do w/o because stats is pretty simple)
-  - `stat-card`: component that displays a stat, takes in a title and text or `stat-display` component to render 
-  - `{name}-stat-display`: component that goes inside stat card to display a graph or something more complex than text
+  - `stat-card`: component that displays a stat, takes in a title and text or `stat-display` component to render (may have small and large variants with some code to potententially upscale small to large)
+  - `{name}-stat-display`: component that goes inside stat card to display a graph or something more complex than text (not actually a custom component, just represents anything that stat-card can accept and display)
   - `games-section`: responsible for games layout and setting games filters as well as mapping in the game rows
   - `game-row`: Individual game row component that gets mapped in, also contains `photo-display` instance
   - `photo-display`: Scrollable photo grid to display media, could potentially be re-used elsewhere hence the separation from `game-row`
@@ -89,12 +89,13 @@
 ## Example Flow
 - `home` gathers user data (stats and games) on load, perhaps caches it in a session so we don't refetch
 - `home` stores state
-  - `allGames`:game data master list
+  - `allGames`:game data master list, would be refreshed on upload or stale page load (if it couldnt be retreived from session storage)
   - `filteredGames`: modified when a filter is applied (not actually state, computed variable inside `games`)
   - `stats`:all stat data (filtering stats would probably be a BE query)
   - `currentGame`: targetgame for photo display modal
+  - `recentGame`: also not actually state, would be fed to the recents section as games[0] assuming games[0] was always the most recent
 - im assuming each game object would have a array of associated media
-- stats gets mapped into `stat-section` inside either a stats div or stats are passed as props to a `stats-section` and mapped there
+- stats gets mapped into `stat-section` inside either a stats div or stats are passed as props to a `stats-section` and mapped there (potentially a function involved for placing stat-cards in the grid)
 - same thing for games
 - games filtering functions would be inside `games` and will update a filtered games variable based off the games recieved as props
 - there would also be modal display, upload functions etc that trigger animations, API calls and such inside `home`
