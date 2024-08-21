@@ -64,6 +64,7 @@
 - I imagine stats would be retrieved as formatted JSON from the backend upon request (on page load or upload)
 ## Games 
 - Would use a CSS grid to display the rows and columns that represent Games, although sometimes it can be tricky to get spacing and alignment totally right with text in rows like this. One solution would be to limit fields to a certain length on mobile
+- to be more specific it would be a large grid enveloping games and each `game-row`  would be layed out using individual grids probably with flex-box at the deepest level
 - Also imagine games are retrieved from the backend as JSON and mapped into respective `game-row` components
 - Again this info would be sent by `home` to `games-section` which would map in the `game-row`s
 - On click the `game-card` will expand and show the `photos-grid` component which is built with css grid, ensuring that photos are displayed in the orientation that they are meant to. I've bult a small demo app to show that this is possible
