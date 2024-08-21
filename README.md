@@ -28,6 +28,7 @@
 # Expansions & Flourishes 
 ## Stats expansion 
 - I find the stats in this design to be perhaps a little too simplistic but I kept it this way so as to not delve too deep into making charts and graphs look good in Figma.
+- I think the desktop version would have the stats displayed in some kind of grid, accomidating larger stat cards. Similar to the photo grid layout I showed in games.
 - It would be really cool to have some long term graphs and charts related to game attendance, weather, deeper baseball stats and many other things I could think of but left out.
 - I would also love to make the stats section feel more journaled/handmade with stickers and collectables ex. Make the fav player headshot look like a sticker you collected and pasted in a journal
 - I would also like to add functionality involving the "pinning" of stats you like to look at the most so they're always on your screen
