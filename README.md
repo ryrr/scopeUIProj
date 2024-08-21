@@ -5,7 +5,6 @@
 - [figma link](https://www.figma.com/design/n0MHcnH09UJZ7rsn9HCp7y/scope-proj?node-id=0-1&t=ZxsGs1yZuNCw8weu-1)
 - alternative editable/pinnable stats [design](scrapbook.PNG) (more fun but maybe too silly)
 - vision for an expanded stats [design](expandedstats.PNG)
-- live
 # Overview
 - Decided on a temporary name of "Ballpark" for the app.
 - Allows for the visualization of attended Baseball games and the user-uploaded media associated with each game.
