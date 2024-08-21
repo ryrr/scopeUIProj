@@ -81,15 +81,14 @@
 - `home` gathers user data (stats and games) on load, perhaps caches it in a session so we don't refetch
 - `home` stores state
   - `allGames`:game data master list
-  - `filteredGames`: modified when a filter is applied
+  - `filteredGames`: modified when a filter is applied (not actually state, computed variable inside `games`)
   - `stats`:all stat data (filtering stats would probably be a BE query)
   - `currentGame`: targetgame for photo display modal
 - im assuming each game object would have a array of associated media
-- stats gets mapped into either a stats div or passed as props to a `stat-section` and spawns a stat card for each stat
+- stats gets mapped into `stat-section` inside either a stats div or stats are passed as props to a `stats-section` and mapped there
 - same thing for games
-- games filtering functions would be inside `home` and passed to `games-section` as props along with filteredGames, so when filter fns are called filteredGames is updated and displayed in games section
-- would also be upload functions etc that trigger animations, API calls and such inside `home`
-- as well as modal display fns 
+- games filtering functions would be inside `games` and will update a filtered games variable based off the games recieved as props
+- there would also be modal display, upload functions etc that trigger animations, API calls and such inside `home`
 # Pitfalls and Grey Areas
 - I've used Figma before but I am by no means an expert, may not have adhered to all the best practices, certainly tried to use auto-layout as much as I could
 - Responsive design always has some pitfalls like text getting too close in a row, etc... didn't delve too deeply into this but hopefully demonstrated how my design scales
