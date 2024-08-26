@@ -1,7 +1,6 @@
 # scopeUIProj
 - UI project for scope labs
 - [loom video](https://www.loom.com/share/53f84f85a074477490bf31a2bb41d09f?sid=d6f15c85-06ee-4cfd-a1b1-b52301580fe0) (sorry for all the ummmms at the begining!)
-- [figma file](scope_proj.fig)
 - [figma link](https://www.figma.com/design/n0MHcnH09UJZ7rsn9HCp7y/scope-proj?node-id=0-1&t=ZxsGs1yZuNCw8weu-1)
 - alternative editable/pinnable stats [design](scrapbook.PNG) (more fun but maybe too silly)
 - vision for an expanded stats [design](expandedstats.PNG)
